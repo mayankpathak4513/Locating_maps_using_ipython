@@ -53,6 +53,8 @@ world_map = folium.Map()
 # display world map
 world_map
 ```
+![result1](Results_for_Maps/result1.png)
+
 Go ahead. Try zooming in and out of the rendered map above.
 
 All locations on a map are defined by their respective Latitude and Longitude values. So you can create a map and pass in a center of Latitude and Longitude values of [0,0].
