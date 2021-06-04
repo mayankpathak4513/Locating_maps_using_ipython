@@ -53,6 +53,7 @@ world_map = folium.Map()
 # display world map
 world_map
 ```
+## Resulted output/Image for simple Map
 ![result1](Results_for_Maps/result1.png)
 
 Go ahead. Try zooming in and out of the rendered map above.
@@ -69,6 +70,9 @@ world_map = folium.Map(location=[20, 78], zoom_start=4)
 # display world map
 world_map
 ```
+## Resulted output/Image for World Map centered around India Map
+![result2](Results_for_Maps/result2.png)
+
 You can change the various latitude and longitute to go through the different locations and countries.
 
 You can also change to zoom level for initial visualization and then zoom-in and out accordingly.
@@ -81,10 +85,14 @@ world_map = folium.Map(location=[20, 77], zoom_start=4, tiles='Stamen Toner')
 # display map
 world_map
 ```
+
+## Resulted output/Image for Stamen Toner map of India
+![result3](Results_for_Maps/result3.png)
+
 These are high-contrast B+W (black and white) maps. They are perfect for data mashups and exploring river meanders and coastal zones.
 
 
-#### Let's create a Stamen Terrain map of Canada with zoom level 4.
+#### Let's create a Stamen Terrain map of India with zoom level 4.
 ```
 # create a Stamen Toner map of the world centered around India
 world_map = folium.Map(location=[20, 77], zoom_start=4, tiles='Stamen Terrain')
@@ -92,6 +100,9 @@ world_map = folium.Map(location=[20, 77], zoom_start=4, tiles='Stamen Terrain')
 # display map
 world_map
 ```
+## Resulted output/Image for Stamen Terrain map of India
+![result4](Results_for_Maps/result4.png)
+
 
 #### Now let us import a data from online source using the url and displat the Choropleth map
 
@@ -182,6 +193,9 @@ world_map.choropleth(
 # display map
 world_map
 ```
+## Resulted output/Image for Choropleth map of the World
+![result5](Results_for_Maps/result5.png)
+
 
 ### Thank you for viewing this notebook
 
