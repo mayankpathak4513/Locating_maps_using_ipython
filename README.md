@@ -199,6 +199,10 @@ world_map
 
 ### Thank you for viewing this notebook
 
+### Just give a try to run cells of code in Jupyter Notebook. You will love ❤ to play with this amazing stuff.
+
+#### You can find the same set of codes executed on Jupyter Notebook By Visiting **👉** [Locating_maps_using_ipython](https://github.com/mayankpathak4513/Locating_maps_using_ipython/blob/master/locating_maps_code.ipynb)
+
 #### This notebook is created by [Mayank Pathak](https://www.linkedin.com/in/mayank-pathak4513/). I hope you found this lab interesting and educational. Feel free to contact me if you have any questions!
 
 ### If you liked the repository and find it useful then please **Drop a star ⭐**
