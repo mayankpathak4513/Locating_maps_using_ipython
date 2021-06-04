@@ -1,6 +1,7 @@
 # Locating_maps_using_ipython and Jupyter Notebook By **Mayank Pathak👨‍💻**
+
 Various map plotting has been done using basic python coding in the jupyter notebook.
-Follow to try and practice for best results.
+Follow to try ,implement and practice to match best results possible out of this notebook.
 
 ### Run all the commands and coding snippets in the python jupyter notekook and get the suprisingly outputs.
 
