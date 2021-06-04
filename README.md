@@ -9,12 +9,16 @@ Follow to try and practice for best results.
 
 # let's Go step by step to implement and Execute the Coding part
 
-> Note : Run and Execute each code block in new cell of Jupyter notebook.
+> Note : Run and Execute each code block in **new cell** of Jupyter notebook.
+
+
 #### Importing Pandas and Numpy
 ```
 import numpy as np  
 import pandas as pd
 ```
+We will be doing such ploting and generating maps using Folium Folium is not available by default. So, we first need to install it before we are able to import it.
+
 
 #### Let's install Folium
 ```
@@ -23,6 +27,23 @@ import folium
 
 print('Folium installed and imported!')
 ```
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    altair-4.1.0               |             py_1         614 KB  conda-forge
+    branca-0.4.1               |             py_0          26 KB  conda-forge
+    brotlipy-0.7.0             |py36h8c4c3a4_1000         346 KB  conda-forge
+    chardet-3.0.4              |py36h9f0ad1d_1006         188 KB  conda-forge
+    cryptography-3.0           |   py36h45558ae_0         640 KB  conda-forge
+    folium-0.5.0               |             py_0          45 KB  conda-forge
+    pandas-1.0.5               |   py36h830a2c2_0        10.1 MB  conda-forge
+    pysocks-1.7.1              |   py36h9f0ad1d_1          27 KB  conda-forge
+    toolz-0.10.0               |             py_0          46 KB  conda-forge
+    urllib3-1.25.10            |             py_0          92 KB  conda-forge
+    vincent-0.4.4              |             py_1          28 KB  conda-forge
+    ------------------------------------------------------------
+                                           Total:        12.1 MB
 
 #### Display simple map
 ```
@@ -32,6 +53,11 @@ world_map = folium.Map()
 # display world map
 world_map
 ```
+Go ahead. Try zooming in and out of the rendered map above.
+
+All locations on a map are defined by their respective Latitude and Longitude values. So you can create a map and pass in a center of Latitude and Longitude values of [0,0].
+
+Let's create a map centered around India and play with the zoom level to see how it affects the rendered map
 
 #### Let's create a map centered around India and play with the zoom level to see how it affects the rendered map
 ```
@@ -41,6 +67,9 @@ world_map = folium.Map(location=[20, 78], zoom_start=4)
 # display world map
 world_map
 ```
+You can change the various latitude and longitute to go through the different locations and countries.
+
+You can also change to zoom level for initial visualization and then zoom-in and out accordingly.
 
 #### Let's create a Stamen Toner map of India with a zoom level of 4.
 ```
@@ -50,6 +79,8 @@ world_map = folium.Map(location=[20, 77], zoom_start=4, tiles='Stamen Toner')
 # display map
 world_map
 ```
+These are high-contrast B+W (black and white) maps. They are perfect for data mashups and exploring river meanders and coastal zones.
+
 
 #### Let's create a Stamen Terrain map of Canada with zoom level 4.
 ```
@@ -61,6 +92,18 @@ world_map
 ```
 
 #### Now let us import a data from online source using the url and displat the Choropleth map
+
+These are maps that feature hill shading and natural vegetation colors. They showcase advanced labeling and linework generalization of dual-carriageway roads.
+
+Feel free to zoom and find the legal roadways and rivers
+
+Now let us import a data from online source using the url and displat the Choropleth map
+
+This data is the immigrants to canada fromdifferent parts of countries
+
+### what is a Choropleth Map :
+A Choropleth map is a thematic map in which areas are shaded or patterned in proportion to the measurement of the statistical variable being displayed on the map, such as population density or per-capita income. The choropleth map provides an easy way to visualize how a measurement varies across a geographic area or it shows the level of variability within a region.
+
 ```
 df_can = pd.read_excel('https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/DV0101EN/labs/Data_Files/Canada.xlsx',
                      sheet_name='Canada by Citizenship',
@@ -106,12 +149,14 @@ df_can.head()
 ```
 
 #### In order to create a Choropleth map, we need a GeoJSON file, let's download it
+In order to create a Choropleth map, we need a GeoJSON file that defines the areas/boundaries of the state, county, or country that we are interested in. In our case, since we are endeavoring to create a world map, we want a GeoJSON that defines the boundaries of all world countries. For your convenience, we will be providing you with this file, so let's go ahead and download it. Let's name it world_countries.json.
 ```
 # download countries geojson file
 !wget --quiet https://s3-api.us-geo.objectstorage.softlayer.net/cf-courses-data/CognitiveClass/DV0101EN/labs/Data_Files/world_countries.json -O world_countries.json
     
 print('GeoJSON file downloaded!')
 ```
+
 ##### Now that we have the GeoJSON file, let's create a world map, centered around [0, 0] latitude and longitude values, with an intial zoom level of 2, and using Mapbox Bright style.
 ```
 world_geo = r'world_countries.json' # geojson file
