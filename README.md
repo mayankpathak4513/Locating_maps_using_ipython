@@ -3,7 +3,7 @@
 Various map plotting has been done using basic python coding in the jupyter notebook.
 Follow to try ,implement and practice to match best results possible out of this notebook.
 
-### Run all the commands and coding snippets in the python jupyter notekook and get the suprisingly outputs.
+### Run all the commands and coding snippets in the python jupyter notebook and get the suprisingly outputs.
 
 
 # let's Go step by step to implement and Execute the Coding part
@@ -16,7 +16,7 @@ Follow to try ,implement and practice to match best results possible out of this
 import numpy as np  
 import pandas as pd
 ```
-We will be doing such ploting and generating maps using Folium Folium is not available by default. So, we first need to install it before we are able to import it.
+We will be doing such ploting and generating maps using Folium. Folium is not available by default. So, we first need to install it before we are able to import it.
 
 
 #### Let's install Folium
@@ -103,7 +103,7 @@ world_map
 ![result4](Results_for_Maps/result4.png)
 
 
-#### Now let us import a data from online source using the url and displat the Choropleth map
+#### Now let us import a data from online source using the url and display the Choropleth map
 
 These are maps that feature hill shading and natural vegetation colors. They showcase advanced labeling and linework generalization of dual-carriageway roads.
 
